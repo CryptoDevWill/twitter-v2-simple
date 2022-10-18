@@ -9,11 +9,6 @@ export default class TwitterV2Simple {
                 accessSecret: config.accessSecret
             })
         }
-        async whoami(){
-
-
-            
-        };
 
         async getTweet(id){
             return await this.client.v2.singleTweet(id, {
