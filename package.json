@@ -1,0 +1,29 @@
+{
+  "name": "twitter-v2-simple",
+  "version": "1.0.0",
+  "description": "A simplified version of Twitters V2 api with straight forward functions and callbacks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CryptoDevWill/twitter-v2-simple.git"
+  },
+  "keywords": [
+    "Twitter",
+    "api",
+    "apk",
+    "v1",
+    "v2",
+    "developer",
+    "automation",
+    "bot"
+  ],
+  "author": "CryptoDevWill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CryptoDevWill/twitter-v2-simple/issues"
+  },
+  "homepage": "https://github.com/CryptoDevWill/twitter-v2-simple#readme"
+}
