@@ -25,7 +25,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
    ```sh
    npm install twitter-v2-simple
    ```
-4. Enter your API in `config.js`
+4. Enter your Twitter API tokens and secrets
    ```js
    const twitter = new TwitterV2Simple({
         appKey: 'KdfeirYYhdf........',
@@ -40,6 +40,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 ## Usage
 
 Below are basic usage for the API.
+##Who am I?
 
 Get your account.
    ```js
