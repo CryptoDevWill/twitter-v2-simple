@@ -40,10 +40,10 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Get your twitter account details
+Get a tweets details.
    ```js
-   //Get your account details
-   const me = twitter.whoami()
-   console.log(me)
+   //Pass the tweet id as a string argument.
+   const tweet = twitter.getTweet('1564694842311049217')
+   console.log(tweet)
    ```
 
