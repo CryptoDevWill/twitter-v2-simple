@@ -1,6 +1,5 @@
 import { TwitterApi } from 'twitter-api-v2';
 
-
 export default class TwitterV2Simple {
         constructor(config){
             this.client = new TwitterApi({
@@ -10,6 +9,12 @@ export default class TwitterV2Simple {
                 accessSecret: config.accessSecret
             })
         }
+        async whoami(){
+
+
+            
+        };
+
         async getTweet(id){
             return await this.client.v2.singleTweet(id, {
                 "tweet.fields": [
@@ -21,11 +26,16 @@ export default class TwitterV2Simple {
                 ],
               })
               .then((response)=>{
-                return response
+                return response;
               })
               .catch((error)=>{
-                return error
+                return error;
               })
-        }
-        
+        };
+
+
+
+
+
+
 }
