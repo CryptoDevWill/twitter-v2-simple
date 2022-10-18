@@ -1,6 +1,6 @@
-import { TwitterApi } from 'twitter-api-v2';
+const { TwitterApi } = require('twitter-api-v2')
 
-export default class TwitterV2Simple {
+    class TwitterV2Simple {
         constructor(config){
             this.client = new TwitterApi({
                 appKey: config.appKey,
@@ -34,3 +34,5 @@ export default class TwitterV2Simple {
 
 
 }
+
+module.exports = TwitterV2Simple
