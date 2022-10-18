@@ -39,7 +39,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Get a tweets details.
+### Get a tweet details.
    ```js
    //Pass the tweet id as a string argument.
    async function getTweetDetails(){
