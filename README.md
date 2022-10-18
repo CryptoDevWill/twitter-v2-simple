@@ -47,7 +47,7 @@ Get a tweets details.
     console.log(tweet)
    }
 
-   //Return tweet from Twitter.
+   //Return tweet object from Twitter.
    {
       data: {
          edit_history_tweet_ids: [ '1564694842311049217' ],

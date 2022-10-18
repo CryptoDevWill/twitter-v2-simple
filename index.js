@@ -20,10 +20,10 @@ const { TwitterApi } = require('twitter-api-v2')
                   'in_reply_to_user_id',
                 ],
               })
-              .then((response)=>{
+              .then(async (response)=>{
                 return response;
               })
-              .catch((error)=>{
+              .catch(async (error)=>{
                 return error;
               })
         };
