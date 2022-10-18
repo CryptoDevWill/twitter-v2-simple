@@ -2,12 +2,6 @@
 
 <a name="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 A simplified version of Twitters V2 api with straight forward functions and callbacks.
