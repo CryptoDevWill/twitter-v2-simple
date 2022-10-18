@@ -11,7 +11,7 @@ export default class TwitterV2Simple {
             })
         }
         async getTweet(id){
-            const response = await this.client.v2.singleTweet(id, {
+            return await this.client.v2.singleTweet(id, {
                 "tweet.fields": [
                     "author_id"
                 ],
@@ -19,13 +19,13 @@ export default class TwitterV2Simple {
                   'entities.mentions.username',
                   'in_reply_to_user_id',
                 ],
-              });
-
-              console.log(response)
+              })
+              .then((response)=>{
+                return response
+              })
+              .catch((error)=>{
+                return error
+              })
         }
-
-
-
-
-
+        
 }
