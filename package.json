@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/CryptoDevWill/twitter-v2-simple/issues"
   },
-  "homepage": "https://github.com/CryptoDevWill/twitter-v2-simple#readme"
+  "homepage": "https://github.com/CryptoDevWill/twitter-v2-simple#readme",
+  "dependencies": {
+    "twitter-api-v2": "^1.12.8"
+  }
 }
