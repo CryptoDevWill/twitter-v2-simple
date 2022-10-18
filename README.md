@@ -21,10 +21,14 @@ There are a few steps that need to take place before you can use the full functi
 
 You will need to access your API keys, and Tokens to initiate the Twitter V2 client.
 
-2. Install NPM packages
+1. Install NPM packages
    ```sh
    npm install twitter-v2-simple
    ```
+2. Import Twitter-V2-Simple
+    ```js
+    import TwitterV2Simple from 'twitter-v2-simple';
+    ```
 4. Enter your Twitter API tokens and secrets
    ```js
    const twitter = new TwitterV2Simple({
@@ -44,6 +48,7 @@ Below are basic usage for the API.
 
 Get your account.
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   const me = twitter.whoami()
+   console.log(me)
    ```
 
