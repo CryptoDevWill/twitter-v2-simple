@@ -10,6 +10,21 @@ const { TwitterApi } = require('twitter-api-v2')
             })
         }
 
+        async getAllRepliedUsers (id){
+            return await client.tweets.tweetsRecentSearch({
+                "query": id,
+                "expansions": [
+                    "referenced_tweets.id.author_id"
+                ]
+              })
+              .then((response)=>{
+                return response;
+              })
+              .catch((error)=>{
+                return error;
+              })
+        }
+
         async getTweet(id){
             return await this.client.v2.singleTweet(id, {
                 "tweet.fields": [
@@ -20,10 +35,10 @@ const { TwitterApi } = require('twitter-api-v2')
                   'in_reply_to_user_id',
                 ],
               })
-              .then(async (response)=>{
+              .then((response)=>{
                 return response;
               })
-              .catch(async (error)=>{
+              .catch((error)=>{
                 return error;
               })
         };
