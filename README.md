@@ -11,9 +11,6 @@ A simplified version of Twitters V2 api with straight forward functions and call
 ## Getting Started
 There are a few steps that need to take place before you can use the full functionality of Twitters V2 Api.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
 1. Create a developer account for Twitter [Twitter Developer](https://developer.twitter.com/en/apply-for-access)
 2. After obtaining your developer account, you must get elevated access to Twitter V2 Api to complete all functions such as, follow, delete, RT, and more. [Twitter Developer - Elevated Access](https://developer.twitter.com/en/portal/products/elevated). 
 
@@ -30,7 +27,12 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
    ```
 4. Enter your API in `config.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   const twitter = new TwitterV2Simple({
+        appKey: 'KdfeirYYhdf........',
+        appSecret: 'TYRhdiIuh......',
+        accessToken: '1435667.......',
+        accessSecret: 'mxGHjgjj.....'
+   });
    ```
 
 
