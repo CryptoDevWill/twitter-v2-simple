@@ -46,8 +46,9 @@ Get a tweets details.
     const tweet = await twitter.getTweet('1564694842311049217')
     console.log(tweet)
    }
-
-   //Return tweet object from Twitter.
+   ```
+   Returns tweet object.
+   ```js
    {
       data: {
          edit_history_tweet_ids: [ '1564694842311049217' ],
