@@ -4,7 +4,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-A simplified version of Twitters V2 api with straight forward functions and callbacks.
+A simplified version of Twitters V2 api with straight forward functions and callbacks. This package is still in development and will add new features in the future.
 
 
 <!-- GETTING STARTED -->
@@ -13,9 +13,6 @@ There are a few steps that need to take place before you can use the full functi
 
 1. Create a developer account for Twitter [Twitter Developer](https://developer.twitter.com/en/apply-for-access)
 2. After obtaining your developer account, you must get elevated access to Twitter V2 Api to complete all functions such as, follow, delete, RT, and more. [Twitter Developer - Elevated Access](https://developer.twitter.com/en/portal/products/elevated). 
-
-"Elevated" access comes with 2,000,000 tweet pulls per month up to 7 days old. 
-"Academic Research" comes with 10,000,000 tweet pulls and full history archive. Both operate on the same functions in this package.
 
 ### Installation
 
@@ -42,9 +39,8 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-Below are basic usage for the API.
 
-###Get your twitter account details
+Get your twitter account details
    ```js
    //Takes no arguments
    const me = twitter.whoami()
