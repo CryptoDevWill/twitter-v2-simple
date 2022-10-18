@@ -15,7 +15,10 @@ There are a few steps that need to take place before you can use the full functi
 
 This is an example of how to list things you need to use the software and how to install them.
 1. Create a developer account for Twitter [Twitter Developer](https://developer.twitter.com/en/apply-for-access)
-2. After obtaining your develoer account, you must get elevated access to Twitter V2 Api to complete all functions such as, follow, delete, RT, and more. [Twitter Developer - Elevated Access](https://developer.twitter.com/en/portal/products/elevated). "Elevated" access comes with 2,000,000 tweet pulls per month up to 7 days old. "Academic Research" comes with 10,000,000 tweet pulls and full history archive. Both operate on the same functions in this package.
+2. After obtaining your developer account, you must get elevated access to Twitter V2 Api to complete all functions such as, follow, delete, RT, and more. [Twitter Developer - Elevated Access](https://developer.twitter.com/en/portal/products/elevated). 
+
+"Elevated" access comes with 2,000,000 tweet pulls per month up to 7 days old. 
+"Academic Research" comes with 10,000,000 tweet pulls and full history archive. Both operate on the same functions in this package.
 
 ### Installation
 
