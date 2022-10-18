@@ -46,6 +46,7 @@ Below are basic usage for the API.
 
 ###Get your twitter account details
    ```js
+   //Takes no arguments
    const me = twitter.whoami()
    console.log(me)
    ```
