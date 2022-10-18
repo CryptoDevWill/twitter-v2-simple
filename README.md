@@ -42,7 +42,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 
 Get your twitter account details
    ```js
-   //Takes no arguments
+   //Get your account details
    const me = twitter.whoami()
    console.log(me)
    ```
