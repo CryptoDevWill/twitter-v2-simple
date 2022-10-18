@@ -28,11 +28,32 @@ const { TwitterApi } = require('twitter-api-v2')
               })
         };
 
-
-
-
-
-
 }
 
-module.exports = TwitterV2Simple
+
+const twitter = new TwitterV2Simple({
+    appKey: 'kxtjskUj4U3Uc7JkiU42hfAQl',
+    appSecret: 'VTnfhCl1xNTu3yrU58LmBdaPIYTwK4DlTJWJ32v3auCXKYTIIZ',
+    accessToken: '1581493602009628672-7FynGeBPqMfzt4rqchp8ZE4vIHFUXH',
+    accessSecret: 'exM5dzIFLK6a06SuVX3QZNyhWsnxsNYsHT75L8uUQCce1'
+});
+
+
+
+async function getTweetDetails(){
+    const tweet = await twitter.getTweet('1564694842311049217')
+    console.log(tweet)
+}
+
+getTweetDetails()
+
+
+
+
+
+
+
+
+
+
+// module.exports = TwitterV2Simple

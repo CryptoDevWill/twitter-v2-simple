@@ -42,7 +42,19 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 Get a tweets details.
    ```js
    //Pass the tweet id as a string argument.
-   const tweet = twitter.getTweet('1564694842311049217')
-   console.log(tweet)
+   async function getTweetDetails(){
+    const tweet = await twitter.getTweet('1564694842311049217')
+    console.log(tweet)
+   }
+
+   //Return tweet from Twitter.
+   {
+      data: {
+         edit_history_tweet_ids: [ '1564694842311049217' ],
+         text: 'who is brave enough to add us to their Twitter Circle?',
+         id: '1564694842311049217',
+         author_id: '783214'
+      }
+   }
    ```
 
