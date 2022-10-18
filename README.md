@@ -36,7 +36,6 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
    });
    ```
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
