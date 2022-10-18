@@ -26,7 +26,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
     ```js
     import TwitterV2Simple from 'twitter-v2-simple';
     ```
-4. Enter your Twitter API tokens and secrets
+4. Enter your Twitter API tokens and secrets. Also make sure to use .ENV to protect your keys.
    ```js
    const twitter = new TwitterV2Simple({
         appKey: 'KdfeirYYhdf........',
