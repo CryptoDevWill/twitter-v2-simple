@@ -42,11 +42,9 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
 Below are basic usage for the API.
-##Who am I?
 
-Get your account.
+###Get your twitter account details
    ```js
    const me = twitter.whoami()
    console.log(me)
