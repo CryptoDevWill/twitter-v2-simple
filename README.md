@@ -138,7 +138,7 @@ Note* Use the getUser() function to get the users id.
 const follow = await twitter.follow('783214')
 console.log(follow)
 ```
-Returns a boolean follow object with the value of true or false, along with pending status.
+Returns a boolean following object with the value of true or false, along with pending status.
 ```js
 { following: true, pending_follow: false }
 ```
@@ -149,10 +149,10 @@ Note* Use the getUser() function to get the users id.
 
 ```js
 //Async Function
-const unfollow = await twitter.unfollow('783214')
-console.log(unfollow)
+const unfollowed = await twitter.unfollow('783214')
+console.log(unfollowed)
 ```
-Returns a boolean unfollow object with the value of true or false. 
+Returns a boolean following object with the value of true or false. 
 ```js
 { following: false }
 ```
@@ -164,7 +164,7 @@ You can get the followers from a user by providing the user id and the amount of
 const followers = await twitter.getFollowers('783214', 100)
 console.log(followers)
 ```
-Returns a an array with user objects and total. 
+Returns an array with user objects and total result count. 
 ```js
 {
   data: [
@@ -195,7 +195,7 @@ You can get everyone a user is following by passing the user id and the amount o
 const followers = await twitter.getFollowing('783214', 5)
 console.log(followers)
 ```
-Returns a an array with user objects and total. 
+Returns an array with user objects and total result count. 
 ```js
 {
   data: [
@@ -220,36 +220,35 @@ Returns a an array with user objects and total.
 ```
 
 ### Like a tweet
-You can like a tweet by passing it's id as an argument. Use the getTweet() to get the tweets id.
-
+You can like a tweet by passing it's id as an argument. Tweet ids are located at the end of the twitter.com link. (Example: https://twitter.com/Twitter/status/1580661436132757506)
 ```js
 //Async Function
 const liked = await twitter.like('1580661436132757506')
 console.log(liked)
 ```
-Returns a boolean liked object with the value of true or false. 
+Returns a boolean liked object with the value of true. 
 ```js
 { liked: true }
 ```
 
 ### Unlike a tweet
-You can unlike a tweet by passing it's id as an argument. Use the getTweet() to get the tweets id.
+You can unlike a tweet by passing it's id as an argument. You can like a tweet by passing it's id as an argument. Tweet ids are located at the end of the twitter.com link. (Example: https://twitter.com/Twitter/status/1580661436132757506)
 
 ```js
 //Async Function
 const unliked = await twitter.unlike('1580661436132757506')
 console.log(unliked)
 ```
-Returns a boolean liked object with the value of true or false. 
+Returns a boolean liked object with the value of false. 
 ```js
 { liked: false }
 ```
 
 ### Direct Message a user
-You can send a Direct Message to a user by passing the user id and the message as an argument.
+You can send a Direct Message to a user by passing the user id and the message you want to send as an argument.
 ```js
 //Async
-const sendDM = await twitter.dm('783214', 'You are amazing!')
+const sendDM = await twitter.dm('783214', 'Twitter API is the best!')
 console.log(sendDM)
 ```
 Returns an object with the Direct Message details.
@@ -259,8 +258,8 @@ Returns an object with the Direct Message details.
       id: '158261136734898521605',
       created_timestamp: '1666158928261',
          message_create: {
-            target: { recipient_id: 'recipient_id' },
-            sender_id: 'your_id',
+            target: { recipient_id: '783214' },
+            sender_id: '15826342311348438521605',
             message_data: { text: 'You are amazing!', entities: [Object] }
          }
    }
