@@ -259,7 +259,7 @@ Returns an object with the Direct Message details.
          message_create: {
             target: { recipient_id: '783214' },
             sender_id: '15826342311348438521605',
-            message_data: { text: 'You are amazing!', entities: [Object] }
+            message_data: { text: 'Twitter API is the best!', entities: [Object] }
          }
    }
 ```
