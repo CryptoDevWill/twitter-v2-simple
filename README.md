@@ -59,6 +59,18 @@ Returns an object with your id, name, and username.
 }
 ```
 
+### Get a users details
+Get the details of a single user. Pass the twitter username as an argument.
+```js
+//Async Function
+const user = await twitter.getUser('twitter')
+console.log(user)
+```
+Returns an object with the users id, name, and username.
+```js
+{ id: '783214', name: 'Twitter', username: 'Twitter' }
+```
+
 ### Get a tweets details.
 ```js
 //Async Function
