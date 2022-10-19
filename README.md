@@ -62,39 +62,38 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
    ```
 
    ### Get all users who replied to a tweet.
+   You can get up to 100 users who replied to a tweet. Pass the conversation id (same as post id) as an argument along with a number between 10-100. If you do not pass an amount it will default to 10.
    ```js
    //Must be a number between 10 and 100. Pass the tweet id as a string argument. 
-  async function getAllReplies(){
-    const allReplies = await twitter.getAllRepliedUsers('1564694842311049217')
-    console.log(allReplies)
-   }
+   const allRepliedUsers = await twitter.getAllRepliedUsers('1580661436132757506', 10)
+   console.log(allRepliedUsers)  
    ```
    Returns an array of up to 100 user objects who replied to a tweet. Along with the original tweet details.
    ```js
-users: [
-         {
-            id: '121497883484980166656',
-            name: 'John Smith',
-            username: 'thesmithman'
-         },
-         {
-            id: '158071034563650621440',
-            name: 'Kim B',
-            username: 'bkim9033'
-         },
-         {
-            id: '158168275334791299584',
-            name: 'Alpha G ',
-            username: 'g_aalfa_1'
-         },
-         // More users
-tweets: [
-         {
-            text: 'This is the original tweet everyone responded to.🤝🏽',
-            author_id: '314084634',
-            id: '158249263045184706048',
-            edit_history_tweet_ids: [Array]
-         },
-      ]
+   users: [
+            {
+               id: '121497883484980166656',
+               name: 'John Smith',
+               username: 'thesmithman'
+            },
+            {
+               id: '158071034563650621440',
+               name: 'Kim B',
+               username: 'bkim9033'
+            },
+            {
+               id: '158168275334791299584',
+               name: 'Alpha G ',
+               username: 'g_aalfa_1'
+            },
+            // More users
+   tweets: [
+            {
+               text: 'This is the original tweet everyone responded to.🤝🏽',
+               author_id: '314084634',
+               id: '158249263045184706048',
+               edit_history_tweet_ids: [Array]
+            },
+         ]
    ```
 
