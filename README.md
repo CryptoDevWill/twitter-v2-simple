@@ -156,3 +156,28 @@ Returns a boolean unfollow object with the value of true or false.
 ```js
 { following: false }
 ```
+
+### Like a tweet
+You can like a tweet by passing it's id as an argument. Use the getTweet() to get the tweets id.
+
+```js
+//Async Function
+const liked = await twitter.like('1580661436132757506')
+console.log(liked)
+```
+Returns a boolean like object with the value of true or false. 
+```js
+{ liked: true }
+```
+
+### Unlike a tweet
+You can unlike a tweet by passing it's id as an argument. Use the getTweet() to get the tweets id.
+
+```js
+//Async Function
+const unliked = await twitter.unlike('1580661436132757506')
+console.log(unliked)
+```
+Returns a boolean like object with the value of true or false. 
+```js
+{ liked: false }
