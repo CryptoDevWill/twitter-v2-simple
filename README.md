@@ -4,7 +4,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-A simplified version of Twitters V2 api with straight forward functions and callbacks. This package is still in development and will add new features in the future.
+A simplified version of Twitters V2 api with straight forward functions and callbacks. If you need quick simple functions such as follow, like, DM and others, then this package is for you. Contributor williamdsanders05@gmail.com This package is still under development. 
 
 
 <!-- GETTING STARTED -->
