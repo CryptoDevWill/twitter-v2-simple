@@ -248,8 +248,9 @@ Returns a boolean liked object with the value of true or false.
 ### Direct Message a user
 You can send a Direct Message to a user by passing the user id and the message as an argument.
 ```js
-const sentDM = await twitter.dm('783214', 'You are amazing!')
-console.log(sentDM)
+//Async
+const sendDM = await twitter.dm('783214', 'You are amazing!')
+console.log(sendDM)
 ```
 Returns an object with the Direct Message details.
 ```js
