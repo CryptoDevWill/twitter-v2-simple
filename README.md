@@ -69,25 +69,32 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
     console.log(allReplies)
    }
    ```
-   Returns an array of up to 100 user objects who replied to a tweet.
+   Returns an array of up to 100 user objects who replied to a tweet. Along with the original tweet details.
    ```js
-[
-  {
-    id: '121497883484980166656',
-    name: 'John Smith',
-    username: 'thesmithman'
-  },
-  {
-    id: '158071034563650621440',
-    name: 'Kim B',
-    username: 'bkim9033'
-  },
-  {
-    id: '158168275334791299584',
-    name: 'Alpha G ',
-    username: 'g_aalfa_1'
-  },
-  // More users
-]
+users: [
+         {
+            id: '121497883484980166656',
+            name: 'John Smith',
+            username: 'thesmithman'
+         },
+         {
+            id: '158071034563650621440',
+            name: 'Kim B',
+            username: 'bkim9033'
+         },
+         {
+            id: '158168275334791299584',
+            name: 'Alpha G ',
+            username: 'g_aalfa_1'
+         },
+         // More users
+tweets: [
+         {
+            text: 'This is the original tweet everyone responded to.🤝🏽',
+            author_id: '314084634',
+            id: '158249263045184706048',
+            edit_history_tweet_ids: [Array]
+         },
+      ]
    ```
 
