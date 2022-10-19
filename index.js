@@ -68,7 +68,7 @@ class TwitterV2Simple {
 
   //Get all replied user details from a tweet.
   async getAllRepliedUsers (tweetId, amount){
-      if(!id) return "Enter Tweet id";
+      if(!tweetId) return "Enter Tweet id";
       return await this.client2.tweets.tweetsRecentSearch({
           "query": `conversation_id:${id}`,
           "max_results": amount? amount : 10,

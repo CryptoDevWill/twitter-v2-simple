@@ -191,8 +191,8 @@ Returns an array with user objects and total result count.
 You can get everyone a user is following by passing the user id and the amount of users as an argument.
 ```js
 //Async Function
-const followers = await twitter.getFollowing('783214', 5)
-console.log(followers)
+const following = await twitter.getFollowing('783214', 5)
+console.log(following)
 ```
 Returns an array with user objects and total result count. 
 ```js
