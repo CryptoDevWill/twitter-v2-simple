@@ -51,16 +51,16 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
    Returns tweet object.
    ```js
    {
-  users: [ { id: '783214', name: 'Twitter', username: 'Twitter' } ],
-  tweets: [
-    {
-      text: 'a hit Tweet https://t.co/VGrsylXB8D https://t.co/2C7cah4KzW',
-      edit_history_tweet_ids: [Array],
-      id: '1580661436132757506',
-      author_id: '783214'
-    }
-  ]
-}
+      users: [ { id: '783214', name: 'Twitter', username: 'Twitter' } ],
+      tweets: [
+            {
+               text: 'a hit Tweet https://t.co/VGrsylXB8D https://t.co/2C7cah4KzW',
+               edit_history_tweet_ids: [Array],
+               id: '1580661436132757506',
+               author_id: '783214'
+            }
+         ]
+   }
    ```
 
    ### Get all users who replied to a tweet.
