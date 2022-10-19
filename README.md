@@ -45,74 +45,74 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 ### Who Am I
 Get the current logged in user for Twitter. 
 ```js
-   //Async Function
-   const me = await twitter.whoami()
-   console.log(me)
+//Async Function
+const me = await twitter.whoami()
+console.log(me)
 ```
 
 Returns an object with your id, name, and username.
 ```js
-   {
-      id: '158143493602009628672',
-      name: 'Your Name',
-      username: 'yourusername'
-   }
+{
+   id: '158143493602009628672',
+   name: 'Your Name',
+   username: 'yourusername'
+}
 ```
 
 ### Get a tweets details.
-   ```js
-   //Async Function
-   const tweet = await twitter.getTweet('1580661436132757506')
-   console.log(tweet)
-   ```
-   Returns tweet object.
-   ```js
-   {
-      users: [ { id: '783214', name: 'Twitter', username: 'Twitter' } ],
-      tweets: [
-            {
-               text: 'a hit Tweet. 🤝🏽',
-               edit_history_tweet_ids: [Array],
-               id: '1580661436132757506',
-               author_id: '783214'
-            }
-         ]
-   }
-   ```
-
-   ### Get all users who replied to a tweet.
-   You can get up to 100 users who replied to a tweet. Pass the conversation id (same as post id) as an argument along with a number between 10-100. If you do not pass an amount it will default to 10.
-   ```js
-   //Async Function
-   const allRepliedUsers = await twitter.getAllRepliedUsers('1580661436132757506', 10)
-   console.log(allRepliedUsers)  
-   ```
-   Returns an array of up to 100 user objects who replied to a tweet. Along with the original tweet details.
-   ```js
-   users: [
-            {
-               id: '121497883484980166656',
-               name: 'John Smith',
-               username: 'thesmithman'
-            },
-            {
-               id: '158071034563650621440',
-               name: 'Kim B',
-               username: 'bkim9033'
-            },
-            {
-               id: '158168275334791299584',
-               name: 'Alpha G ',
-               username: 'g_aalfa_1'
-            },
-            // More users
+```js
+//Async Function
+const tweet = await twitter.getTweet('1580661436132757506')
+console.log(tweet)
+```
+Returns tweet object.
+```js
+{
+   users: [ { id: '783214', name: 'Twitter', username: 'Twitter' } ],
    tweets: [
-            {
-               text: 'a hit Tweet. 🤝🏽',
-               author_id: '783214',
-               id: '158249263045184706048',
-               edit_history_tweet_ids: [Array]
-            },
-         ]
-   ```
+         {
+            text: 'a hit Tweet. 🤝🏽',
+            edit_history_tweet_ids: [Array],
+            id: '1580661436132757506',
+            author_id: '783214'
+         }
+      ]
+}
+```
+
+### Get all users who replied to a tweet.
+You can get up to 100 users who replied to a tweet. Pass the conversation id (same as post id) as an argument along with a number between 10-100. If you do not pass an amount it will default to 10.
+```js
+//Async Function
+const allRepliedUsers = await twitter.getAllRepliedUsers('1580661436132757506', 10)
+console.log(allRepliedUsers)  
+```
+Returns an array of up to 100 user objects who replied to a tweet. Along with the original tweet details.
+```js
+users: [
+         {
+            id: '121497883484980166656',
+            name: 'John Smith',
+            username: 'thesmithman'
+         },
+         {
+            id: '158071034563650621440',
+            name: 'Kim B',
+            username: 'bkim9033'
+         },
+         {
+            id: '158168275334791299584',
+            name: 'Alpha G ',
+            username: 'g_aalfa_1'
+         },
+         // More users
+tweets: [
+         {
+            text: 'a hit Tweet. 🤝🏽',
+            author_id: '783214',
+            id: '158249263045184706048',
+            edit_history_tweet_ids: [Array]
+         },
+      ]
+```
 
