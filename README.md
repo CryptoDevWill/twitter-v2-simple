@@ -128,7 +128,7 @@ tweets: [
       ]
 ```
 
-### Follow a single user
+### Follow a user
 You can follow a single user by providing the logged in user id (your user id) and the id of the user to follow. Note* Use whoami() function to get current logged in user id.
 
 ```js
@@ -141,15 +141,15 @@ Returns a boolen follow object with the value of true or false, along with pendi
 { following: true, pending_follow: false }
 ```
 
-### Unollow a single user
-You can follow a single user by providing the logged in user id (your user id) and the id of the user to follow. Note* Use whoami() function to get current logged in user id.
+### Unollow a user
+You can also unfollow a single user by providing the logged in user id (your user id) and the id of the user to follow. Note* Use whoami() function to get current logged in user id.
 
 ```js
 //Async Function
 const unfollow =  await twitter.unfollow('15814-your-id-628672', '783214')
 console.log(unfollow)
 ```
-Returns a boolen follow object with the value of true or false, along with pending status. 
+Returns a boolen unfollow object with the value of true or false. 
 ```js
 { following: false }
 ```
