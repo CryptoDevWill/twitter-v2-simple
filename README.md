@@ -157,6 +157,68 @@ Returns a boolean unfollow object with the value of true or false.
 { following: false }
 ```
 
+### Get followers of a user
+You can get the followers from a user by providing the user id and the amount of users you want to return as an argument.
+```js
+//Async Function
+const followers = await twitter.getFollowers('783214', 100)
+console.log(followers)
+```
+Returns a an array with user objects and total. 
+```js
+{
+  data: [
+   {
+      id: '158260446354554138113',
+      name: 'Tina',
+      username: 'tin452'
+    ,
+   {
+      id: '1582604434533938063360',
+      name: 'Melese',
+      username: 'Melese85'
+   },
+   { id: '158234529484546396160', 
+      name: 'James', 
+      username: 'james5118' 
+   }
+   //More usernames
+  ],
+  meta: { result_count: 100, next_token: 'MISPFPRRGFTCV1GZZZ' }
+}
+```
+
+### Get following of user
+You can get everyone a user is following by passing the user id and the amount of users as an argument.
+```js
+//Async Function
+const followers = await twitter.getFollowing('783214', 5)
+console.log(followers)
+```
+Returns a an array with user objects and total. 
+```js
+{
+  data: [
+   {
+      id: '158260446354554138113',
+      name: 'Bossman',
+      username: 'boss_man-4000'
+    ,
+   {
+      id: '1582604434533938063360',
+      name: 'Michael Fin',
+      username: 'fin-mich3456'
+   },
+   { id: '158234529484546396160', 
+      name: 'ChrisTy', 
+      username: 'christy4you' 
+   }
+   //More usernames
+  ],
+  meta: { result_count: 5, next_token: 'MISPFPRRGFTCV1GZZZ' }
+}
+```
+
 ### Like a tweet
 You can like a tweet by passing it's id as an argument. Use the getTweet() to get the tweets id.
 
@@ -165,7 +227,7 @@ You can like a tweet by passing it's id as an argument. Use the getTweet() to ge
 const liked = await twitter.like('1580661436132757506')
 console.log(liked)
 ```
-Returns a boolean like object with the value of true or false. 
+Returns a boolean liked object with the value of true or false. 
 ```js
 { liked: true }
 ```
@@ -178,6 +240,6 @@ You can unlike a tweet by passing it's id as an argument. Use the getTweet() to 
 const unliked = await twitter.unlike('1580661436132757506')
 console.log(unliked)
 ```
-Returns a boolean like object with the value of true or false. 
+Returns a boolean liked object with the value of true or false. 
 ```js
 { liked: false }
