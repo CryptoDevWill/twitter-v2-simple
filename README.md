@@ -44,10 +44,8 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 ### Get a tweets details.
    ```js
     //Async Function
-   async function getTweetDetails(){
       const tweet = await twitter.getTweet('1564694842311049217')
       console.log(tweet)
-   }
    ```
    Returns tweet object.
    ```js
