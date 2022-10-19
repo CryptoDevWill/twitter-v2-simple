@@ -12,7 +12,7 @@ A simplified version of Twitters V2 api with straight forward functions and call
 There are a few steps that need to take place before you can use the full functionality of Twitters V2 Api.
 
 1. Create a developer account for Twitter [Twitter Developer](https://developer.twitter.com/en/apply-for-access)
-2. After obtaining your developer account, you must get elevated access to Twitter V2 Api to complete all functions such as, follow, delete, RT, and more. [Twitter Developer - Elevated Access](https://developer.twitter.com/en/portal/products/elevated). 
+2. After obtaining your developer account, you must get elevated access to Twitter V2 Api to complete all functions such as, follow, delete, like, and more. [Twitter Developer - Elevated Access](https://developer.twitter.com/en/portal/products/elevated). 
 
 ### Installation
 
@@ -25,7 +25,9 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 2. Import Twitter-V2-Simple
     ```js
     import TwitterV2Simple from 'twitter-v2-simple';
-    //or
+
+    //Or
+
     const TwitterV2Simple = require('twitter-v2-simple');
     ```
 4. Enter your Twitter API tokens and secrets. Also make sure to use .ENV to protect your keys.
@@ -41,7 +43,6 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
 ### Who Am I
 Get the current logged in user for Twitter. 
 ```js
@@ -60,7 +61,7 @@ Returns an object with your id, name, and username.
 ```
 
 ### Get a users details
-Get the details of a single user. Pass the twitter username as an argument.
+Get the details of a single user. Pass the Twitter username as an argument.
 ```js
 //Async Function
 const user = await twitter.getUser('twitter')
@@ -72,6 +73,7 @@ Returns an object with the users id, name, and username.
 ```
 
 ### Get a tweets details.
+Get the details of a given tweet.
 ```js
 //Async Function
 const tweet = await twitter.getTweet('1580661436132757506')
@@ -129,9 +131,7 @@ tweets: [
 ```
 
 ### Follow a user
-You can follow a user by passing the user id as an argument. 
-Note* Use the getUser() function to get the users id.
-
+You can follow a user by passing the user id as an argument.
 
 ```js
 //Async Function
@@ -145,14 +145,13 @@ Returns a boolean following object with the value of true or false, along with p
 
 ### Unfollow a user
 You can also unfollow a user by passing the users id as an argument.
-Note* Use the getUser() function to get the users id.
 
 ```js
 //Async Function
 const unfollowed = await twitter.unfollow('783214')
 console.log(unfollowed)
 ```
-Returns a boolean following object with the value of true or false. 
+Returns a boolean following object with the value of false. 
 ```js
 { following: false }
 ```
@@ -232,7 +231,7 @@ Returns a boolean liked object with the value of true.
 ```
 
 ### Unlike a tweet
-You can unlike a tweet by passing it's id as an argument. You can like a tweet by passing it's id as an argument. Tweet ids are located at the end of the twitter.com link. (Example: https://twitter.com/Twitter/status/1580661436132757506)
+You can unlike a tweet by passing it's id as an argument. Tweet ids are located at the end of the twitter.com link. (Example: https://twitter.com/Twitter/status/1580661436132757506)
 
 ```js
 //Async Function
@@ -248,8 +247,8 @@ Returns a boolean liked object with the value of false.
 You can send a Direct Message to a user by passing the user id and the message you want to send as an argument.
 ```js
 //Async
-const sendDM = await twitter.dm('783214', 'Twitter API is the best!')
-console.log(sendDM)
+const sendDm = await twitter.dm('783214', 'Twitter API is the best!')
+console.log(sendDm)
 ```
 Returns an object with the Direct Message details.
 ```js
