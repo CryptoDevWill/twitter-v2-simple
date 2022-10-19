@@ -2,6 +2,7 @@ const { TwitterApi } = require('twitter-api-v2')
 const { Client } = require("twitter-api-sdk");
 
 
+
 class TwitterV2Simple {
   //Constructor stores this.id with current logged in user id to propagate values required by the user.
   constructor(config){
