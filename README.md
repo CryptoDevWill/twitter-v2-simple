@@ -42,6 +42,23 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+### Who Am I
+Get the current logged in user for Twitter. 
+```js
+   //Async Function
+   const me = await twitter.whoami()
+   console.log(me)
+```
+
+Returns an object with your id, name, and username.
+```js
+   {
+      id: '158143493602009628672',
+      name: 'Your Name',
+      username: 'yourusername'
+   }
+```
+
 ### Get a tweets details.
    ```js
    //Async Function
