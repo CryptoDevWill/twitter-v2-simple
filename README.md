@@ -61,3 +61,16 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
    }
    ```
 
+   ### Get all users who replied to a tweet.
+   ```js
+   //Pass the tweet id as a string argument.
+  async function getAllReplies(){
+    const allReplies = await twitter.getAllRepliedUsers('1564694842311049217')
+    console.log(allReplies)
+   }
+   ```
+   Returns an array of up to 100 users who replied to a tweet.
+   ```js
+
+   ```
+

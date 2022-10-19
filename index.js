@@ -11,7 +11,7 @@ const { TwitterApi } = require('twitter-api-v2')
         }
 
         async getAllRepliedUsers (id){
-            return await client.tweets.tweetsRecentSearch({
+            return await this.client.tweets.tweetsRecentSearch({
                 "query": id,
                 "expansions": [
                     "referenced_tweets.id.author_id"
