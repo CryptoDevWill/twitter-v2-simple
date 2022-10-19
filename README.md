@@ -54,7 +54,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
       users: [ { id: '783214', name: 'Twitter', username: 'Twitter' } ],
       tweets: [
             {
-               text: 'a hit Tweet https://t.co/VGrsylXB8D https://t.co/2C7cah4KzW',
+               text: 'a hit Tweet. 🤝🏽',
                edit_history_tweet_ids: [Array],
                id: '1580661436132757506',
                author_id: '783214'
@@ -91,7 +91,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
             // More users
    tweets: [
             {
-               text: 'This is the original tweet everyone responded to.🤝🏽',
+               text: 'a hit Tweet. 🤝🏽',
                author_id: '314084634',
                id: '158249263045184706048',
                edit_history_tweet_ids: [Array]
