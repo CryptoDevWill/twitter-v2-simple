@@ -74,7 +74,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 [
   {
     id: '121497883484980166656',
-    name: 'John Smith,
+    name: 'John Smith',
     username: 'thesmithman'
   },
   {
