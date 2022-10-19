@@ -43,7 +43,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 
 ### Get a tweets details.
    ```js
-   //Pass the tweet id as a string argument.
+    //Async Function
    async function getTweetDetails(){
       const tweet = await twitter.getTweet('1564694842311049217')
       console.log(tweet)
@@ -64,7 +64,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
    ### Get all users who replied to a tweet.
    You can get up to 100 users who replied to a tweet. Pass the conversation id (same as post id) as an argument along with a number between 10-100. If you do not pass an amount it will default to 10.
    ```js
-   //Must be a number between 10 and 100. Pass the tweet id as a string argument. 
+   //Async Function
    const allRepliedUsers = await twitter.getAllRepliedUsers('1580661436132757506', 10)
    console.log(allRepliedUsers)  
    ```
