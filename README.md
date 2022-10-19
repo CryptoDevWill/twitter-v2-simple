@@ -31,10 +31,11 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 4. Enter your Twitter API tokens and secrets. Also make sure to use .ENV to protect your keys.
    ```js
    const twitter = new TwitterV2Simple({
-        appKey: 'KdfeirYYhdf........',
-        appSecret: 'TYRhdiIuh......',
-        accessToken: '1435667.......',
-        accessSecret: 'mxGHjgjj.....'
+      appKey: 'KdfeirYYhdf........',
+      appSecret: 'TYRhdiIuh......',
+      accessToken: '1435667.......',
+      accessSecret: 'mxGHjgjj.....',
+      bearerToken: 'AAAAAAAAA......'
    });
    ```
 
