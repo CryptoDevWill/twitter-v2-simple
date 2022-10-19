@@ -99,7 +99,7 @@ You can get up to 100 users who replied to a tweet. Pass the conversation id (sa
 const allRepliedUsers = await twitter.getAllRepliedUsers('1580661436132757506', 10)
 console.log(allRepliedUsers)  
 ```
-Returns an array of up to 100 user objects who replied to a tweet. Along with the original tweet details.
+Returns an array of up to 100 user objects who replied to the tweet. Along with the original tweet details.
 ```js
 users: [
          {
@@ -144,7 +144,7 @@ Returns a boolean follow object with the value of true or false, along with pend
 ```
 
 ### Unfollow a user
-You can also unfollow a user by passing the usern id as an argument.
+You can also unfollow a user by passing the users id as an argument.
 Note* Use the getUser() function to get the users id.
 
 ```js
