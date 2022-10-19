@@ -129,15 +129,16 @@ tweets: [
 ```
 
 ### Follow a user
-You can follow a user by passing the user id as an argument.
+You can follow a user by passing the user id as an argument. 
+Note* Use the getUser() function to get the users id.
+
 
 ```js
 //Async Function
-const follow =  await twitter.follow('783214')
+const follow = await twitter.follow('783214')
 console.log(follow)
 ```
 Returns a boolean follow object with the value of true or false, along with pending status.
-Note* Use the getUser() function to get the users id.
 ```js
 { following: true, pending_follow: false }
 ```
@@ -148,7 +149,7 @@ Note* Use the getUser() function to get the users id.
 
 ```js
 //Async Function
-const unfollow =  await twitter.unfollow('783214')
+const unfollow = await twitter.unfollow('783214')
 console.log(unfollow)
 ```
 Returns a boolean unfollow object with the value of true or false. 
