@@ -141,7 +141,7 @@ Returns a boolean follow object with the value of true or false, along with pend
 { following: true, pending_follow: false }
 ```
 
-### Unollow a user
+### Unfollow a user
 You can also unfollow a single user by providing the logged in user id (your user id) and the id of the user to follow. 
 Note* Use whoami() function to get current logged in user id.
 
