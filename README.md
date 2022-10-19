@@ -243,3 +243,24 @@ console.log(unliked)
 Returns a boolean liked object with the value of true or false. 
 ```js
 { liked: false }
+```
+
+### Direct Message a user
+You can send a Direct Message to a user by passing the user id and the message as an argument.
+```js
+const sentDM = await twitter.dm('783214', 'You are amazing!')
+console.log(sentDM)
+```
+Returns an object with the Direct Message details.
+```js
+   {
+      type: 'message_create',
+      id: '158261136734898521605',
+      created_timestamp: '1666158928261',
+         message_create: {
+            target: { recipient_id: 'recipient_id' },
+            sender_id: 'your_id',
+            message_data: { text: 'You are amazing!', entities: [Object] }
+         }
+   }
+```
