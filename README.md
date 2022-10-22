@@ -263,7 +263,7 @@ You can delete a tweet that belongs to you by passing the tweet id as an argumen
 ```js
 //Async Function
 const deleteTweet = await twitter.delete('1580661436132757506')
-console.log(replyTweet)
+console.log(deleteTweet)
 ```
 Returns a large object with the deleted tweet's status. 
 ```js
