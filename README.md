@@ -8,7 +8,7 @@ A simplified version of Twitters V2 api with straight forward functions and call
 
 <!-- TABLE OF CONTENTS -->
 ## Table Of Contents
-# User
+### User
 1. [Who am I](#who-am-i)
 2. [Get user details](#get-user-details)
 3. [Get users replied to tweet](#get-users-replied-to-tweet)
@@ -17,9 +17,8 @@ A simplified version of Twitters V2 api with straight forward functions and call
 5. [Get followers of a user](#get-followers-of-a-user)
 6. [Get following of a user](#get-following-of-a-user)
 7. [Direct Message a user](#direct-message-a-user)
-# Tweets
+### Tweets
 8. [Make a tweet](#make-a-tweet)
-9. [Get a tweet](#get-a-tweet)
 9. [Get a tweet](#get-a-tweet)
 10. [Reply to a tweet](#reply-to-a-tweet)
 11. [Like a tweet](#like-a-tweet)
