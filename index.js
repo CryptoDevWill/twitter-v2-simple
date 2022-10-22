@@ -30,7 +30,7 @@ class TwitterV2Simple {
           return response.data;
       })
       .catch((error)=>{
-          return error;
+          return error.message;
       });
   };
 
@@ -42,7 +42,7 @@ class TwitterV2Simple {
           return response.data;
       })
       .catch((error)=>{
-          return error;
+          return error.message;
       });
   }
 
@@ -54,7 +54,7 @@ class TwitterV2Simple {
         return response
     })
     .catch((error)=>{
-        return error;
+        return error.message;
     });
   }
 
@@ -66,7 +66,7 @@ class TwitterV2Simple {
             return response;
         })
         .catch((error)=>{
-            return error;
+            return error.message;
         });
   }
 
@@ -79,7 +79,7 @@ class TwitterV2Simple {
             return response;
         })
         .catch((error)=>{
-            return error;
+            return error.message;
         });
   }
 
@@ -99,8 +99,13 @@ class TwitterV2Simple {
               "referenced_tweets.id",
               "referenced_tweets.id.author_id"
           ]
+        })
+        .then((response)=>{
+            return response.includes;
+        })
+        .catch((error)=>{
+            return error.error.errors[0].message;
         });
-        return response.includes;
   }
 
   //Get all replied user details from a tweet.
@@ -131,7 +136,7 @@ class TwitterV2Simple {
           return response.data;
       })
       .catch((error)=>{
-          return error;
+          return error.message;
       })
   }
 
@@ -143,7 +148,7 @@ class TwitterV2Simple {
           return response.data;
       })
       .catch((error)=>{
-          return error;
+          return error.message;
       })
   }
 
@@ -157,7 +162,7 @@ class TwitterV2Simple {
           return response;
       })
       .catch((error)=>{
-          return error;
+          return error.message;
       });
   };
 
@@ -171,7 +176,7 @@ class TwitterV2Simple {
           return response;
       })
       .catch((error)=>{
-          return error;
+          return error.message;
       });
   };
 
@@ -183,7 +188,7 @@ class TwitterV2Simple {
           return response.data;
       })
       .catch((error)=>{
-          return error;
+          return error.message;
       });
   };
 
@@ -195,7 +200,7 @@ class TwitterV2Simple {
           return response.data;
       })
       .catch((error)=>{
-          return error;
+          return error.message;
       });
   };
 
