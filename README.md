@@ -9,6 +9,8 @@ A simplified version of Twitters V2 api with straight forward functions and call
 <!-- TABLE OF CONTENTS -->
 ## Table Of Contents
 [Who Am I](#who-am-i)
+[Get User Details](#get-user-details)
+[Get User Details](#get-user-details)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -46,6 +48,8 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+V2 simple only focuses on the main core functions in the user and tweet category. For more advanced functions please visit the original Twitter SDK for further documentation. [Twitter SDK](https://github.com/twitterdev/twitter-api-typescript-sdk)
+## User
 ### Who Am I
 Get the current logged in user for Twitter. 
 ```js
@@ -75,27 +79,6 @@ Returns an object with the users id, name, and username.
 { id: '783214', name: 'Twitter', username: 'Twitter' }
 ```
 
-### Get a tweets details.
-Get the details of a given tweet.
-```js
-//Async Function
-const tweet = await twitter.getTweet('1580661436132757506')
-console.log(tweet)
-```
-Returns tweet object.
-```js
-{
-   users: [ { id: '783214', name: 'Twitter', username: 'Twitter' } ],
-   tweets: [
-         {
-            text: 'a hit Tweet. 🤝🏽',
-            edit_history_tweet_ids: [Array],
-            id: '1580661436132757506',
-            author_id: '783214'
-         }
-      ]
-}
-```
 
 ### Get all users who replied to a tweet.
 You can get up to 100 users who replied to a tweet. Pass the conversation id (same as post id) as an argument along with a number between 10-100. If you do not pass an amount it will default to 10.
@@ -221,6 +204,27 @@ Returns an array with user objects and total result count.
 }
 ```
 
+### Direct Message a user
+You can send a Direct Message to a user by passing the user id and the message you want to send as an argument.
+```js
+//Async
+const sendDm = await twitter.dm('783214', 'Twitter API is the best!')
+console.log(sendDm)
+```
+Returns an object with the Direct Message details.
+```js
+   {
+      type: 'message_create',
+      id: '158261136734898521605',
+      created_timestamp: '1666158928261',
+         message_create: {
+            target: { recipient_id: '783214' },
+            sender_id: '15826342311348438521605',
+            message_data: { text: 'Twitter API is the best!', entities: [Object] }
+         }
+   }
+```
+## Tweets
 ### Make a tweet
 You can make a tweet by passing a message in as an argument.
 ```js
@@ -239,6 +243,28 @@ Returns a large object with the status of the created tweet.
   display_text_range: [ 0, 38 ],
   entities: { hashtags: [], symbols: [], user_mentions: [], urls: [] },
   // Alot more information 
+```
+
+### Get a tweet.
+Get the details of a given tweet.
+```js
+//Async Function
+const tweet = await twitter.getTweet('1580661436132757506')
+console.log(tweet)
+```
+Returns tweet object.
+```js
+{
+   users: [ { id: '783214', name: 'Twitter', username: 'Twitter' } ],
+   tweets: [
+         {
+            text: 'a hit Tweet. 🤝🏽',
+            edit_history_tweet_ids: [Array],
+            id: '1580661436132757506',
+            author_id: '783214'
+         }
+      ]
+}
 ```
 
 ### Reply to a tweet
@@ -304,25 +330,4 @@ console.log(unliked)
 Returns a boolean liked object with the value of false. 
 ```js
 { liked: false }
-```
-
-### Direct Message a user
-You can send a Direct Message to a user by passing the user id and the message you want to send as an argument.
-```js
-//Async
-const sendDm = await twitter.dm('783214', 'Twitter API is the best!')
-console.log(sendDm)
-```
-Returns an object with the Direct Message details.
-```js
-   {
-      type: 'message_create',
-      id: '158261136734898521605',
-      created_timestamp: '1666158928261',
-         message_create: {
-            target: { recipient_id: '783214' },
-            sender_id: '15826342311348438521605',
-            message_data: { text: 'Twitter API is the best!', entities: [Object] }
-         }
-   }
 ```
