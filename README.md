@@ -8,15 +8,23 @@ A simplified version of Twitters V2 api with straight forward functions and call
 
 <!-- TABLE OF CONTENTS -->
 ## Table Of Contents
-1. [Who Am I](#who-am-i)
-2. [Get User Details](#get-user-details)
-3. [Get Users Replied To Tweet](#get-users-replied-to-tweet)
-4. [Follow A User](#follow-a-user)
-5. [Unfollow A User](#unfollow-a-user)
-5. [Get Followers Of A User](#get-followers-of-a-user)
-6. [Get Following Of A User](#get-following-of-a-user)
-7. [Direct Message A User](#direct-message-a-user)
-
+# User
+1. [Who am I](#who-am-i)
+2. [Get user details](#get-user-details)
+3. [Get users replied to tweet](#get-users-replied-to-tweet)
+4. [Follow a user](#follow-a-user)
+5. [Unfollow a user](#unfollow-a-user)
+5. [Get followers of a user](#get-followers-of-a-user)
+6. [Get following of a user](#get-following-of-a-user)
+7. [Direct Message a user](#direct-message-a-user)
+# Tweets
+8. [Make a tweet](#make-a-tweet)
+9. [Get a tweet](#get-a-tweet)
+9. [Get a tweet](#get-a-tweet)
+10. [Reply to a tweet](#reply-to-a-tweet)
+11. [Like a tweet](#like-a-tweet)
+13. [Unlike a tweet](#unlike-a-tweet)
+14. [Delete a tweet](#delete-a-tweet)
 <!-- GETTING STARTED -->
 ## Getting Started
 There are a few steps that need to take place before you can use the full functionality of Twitters V2 Api.
@@ -292,26 +300,6 @@ Returns a large object with the tweet reply status.
   // Alot more information 
 ```
 
-### Delete a tweet
-You can delete a tweet that belongs to you by passing the tweet id as an argument.
-```js
-//Async Function
-const deleteTweet = await twitter.delete('1580661436132757506')
-console.log(deleteTweet)
-```
-Returns a large object with the deleted tweet's status. 
-```js
-{
-  created_at: 'Mon Oct 17 08:23:23 +0000 2022',
-  id: 158192381666432424323400,
-  id_str: '15819238123423939968',
-  full_text: "@twitter Let's work together!",
-  truncated: false,
-  display_text_range: [ 0, 24 ],
-  entities: { hashtags: [], symbols: [], user_mentions: [], urls: [] },
-  // Alot more information 
-```
-
 ### Like a tweet
 You can like a tweet by passing it's id as an argument. Tweet ids are located at the end of the twitter.com link. (Example: https://twitter.com/Twitter/status/1580661436132757506)
 ```js
@@ -335,4 +323,24 @@ console.log(unliked)
 Returns a boolean liked object with the value of false. 
 ```js
 { liked: false }
+```
+
+### Delete a tweet
+You can delete a tweet that belongs to you by passing the tweet id as an argument.
+```js
+//Async Function
+const deleteTweet = await twitter.delete('1580661436132757506')
+console.log(deleteTweet)
+```
+Returns a large object with the deleted tweet's status. 
+```js
+{
+  created_at: 'Mon Oct 17 08:23:23 +0000 2022',
+  id: 158192381666432424323400,
+  id_str: '15819238123423939968',
+  full_text: "@twitter Let's work together!",
+  truncated: false,
+  display_text_range: [ 0, 24 ],
+  entities: { hashtags: [], symbols: [], user_mentions: [], urls: [] },
+  // Alot more information 
 ```
