@@ -49,7 +49,7 @@ class TwitterV2Simple {
   //Make a tweet
   async tweet(message){
     if(!message) return 'Enter message to tweet';
-        return await this.client.v1.tweet('If you have new music, drop your link!')
+        return await this.client.v1.tweet(message)
     .then((response)=>{
         return response
     })
@@ -63,7 +63,7 @@ class TwitterV2Simple {
     if(!tweetId) return 'Enter tweet id to delete.';
     return await this.client.v1.deleteTweet(tweetid)
         .then((response)=>{
-            return response
+            return response;
         })
         .catch((error)=>{
             return error;
@@ -76,7 +76,7 @@ class TwitterV2Simple {
     if(!tweetId) return 'Enter tweet id.';
         return await this.client.v1.reply(message, tweetId)
         .then((response)=>{
-            return response
+            return response;
         })
         .catch((error)=>{
             return error;
@@ -127,11 +127,11 @@ class TwitterV2Simple {
   async follow(userId){
       if(!userId) return "Enter user id.";
       return await this.client.v2.follow(await this.id, userId)
-      .then((responce)=>{
-          return responce.data
+      .then((response)=>{
+          return response.data;
       })
       .catch((error)=>{
-          return error
+          return error;
       })
   }
 
@@ -139,8 +139,8 @@ class TwitterV2Simple {
   async unfollow(userId){
       if(!userId) return "Enter user id.";
       return await this.client.v2.unfollow(await this.id, userId)
-      .then((responce)=>{
-          return responce.data;
+      .then((response)=>{
+          return response.data;
       })
       .catch((error)=>{
           return error;
@@ -180,7 +180,7 @@ class TwitterV2Simple {
       if(!postId) return "Enter post Id.";
       return await this.client.v2.like(await this.id, postId)
       .then((response)=>{
-          return response.data
+          return response.data;
       })
       .catch((error)=>{
           return error;

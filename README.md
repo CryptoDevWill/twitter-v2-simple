@@ -218,6 +218,18 @@ Returns an array with user objects and total result count.
 }
 ```
 
+### Make a tweet
+You can make a tweet by passing a message in as an argument.
+```js
+//Async Function
+const makeTweet = await twitter.tweet('You are the best dev!')
+console.log(makeTweet)
+```
+Returns a boolean liked object with the value of true. 
+```js
+{ liked: true }
+```
+
 ### Like a tweet
 You can like a tweet by passing it's id as an argument. Tweet ids are located at the end of the twitter.com link. (Example: https://twitter.com/Twitter/status/1580661436132757506)
 ```js
