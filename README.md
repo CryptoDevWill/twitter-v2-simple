@@ -10,7 +10,12 @@ A simplified version of Twitters V2 api with straight forward functions and call
 ## Table Of Contents
 1. [Who Am I](#who-am-i)
 2. [Get User Details](#get-user-details)
-3. [Get Users Replied To Tweet](#get-users-reploed-to-tweet)
+3. [Get Users Replied To Tweet](#get-users-replied-to-tweet)
+4. [Follow A User](#follow-a-user)
+5. [Unfollow A User](#unfollow-a-user)
+5. [Get Followers Of A User](#get-followers-of-a-user)
+6. [Get Following Of A User](#get-following-of-a-user)
+7. [Direct Message A User](#direct-message-a-user)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -67,7 +72,7 @@ Returns an object with your id, name, and username.
 }
 ```
 
-### Get a users details
+### Get a user details
 Get the details of a single user. Pass the Twitter username as an argument.
 ```js
 //Async Function
