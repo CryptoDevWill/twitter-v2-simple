@@ -70,7 +70,7 @@ class TwitterV2Simple {
   async getAllRepliedUsers (tweetId, amount){
       if(!tweetId) return "Enter Tweet id";
       return await this.client2.tweets.tweetsRecentSearch({
-          "query": `conversation_id:${id}`,
+          "query": `conversation_id:${tweetId}`,
           "max_results": amount? amount : 10,
           "expansions": [
               "in_reply_to_user_id",
