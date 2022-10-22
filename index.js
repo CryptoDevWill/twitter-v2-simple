@@ -46,6 +46,43 @@ class TwitterV2Simple {
       });
   }
 
+  //Make a tweet
+  async tweet(message){
+    if(!message) return 'Enter message to tweet';
+        return await this.client.v1.tweet('If you have new music, drop your link!')
+    .then((response)=>{
+        return response
+    })
+    .catch((error)=>{
+        return error;
+    });
+  }
+
+  //Delete a tweet
+  async delete(tweetId){
+    if(!tweetId) return 'Enter tweet id to delete.';
+    return await this.client.v1.deleteTweet(tweetid)
+        .then((response)=>{
+            return response
+        })
+        .catch((error)=>{
+            return error;
+        });
+  }
+
+  //Reply to a tweet
+  async reply(message, tweetId){
+    if(!message) return 'Enter a message.';
+    if(!tweetId) return 'Enter tweet id.';
+        return await this.client.v1.reply(message, tweetId)
+        .then((response)=>{
+            return response
+        })
+        .catch((error)=>{
+            return error;
+        });
+  }
+
   //Get a tweet details.
   async getTweet(tweetId){
       if(!tweetId) return "Enter Tweet id.";
