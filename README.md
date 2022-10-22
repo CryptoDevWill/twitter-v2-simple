@@ -6,6 +6,9 @@
 ## About The Project
 A simplified version of Twitters V2 api with straight forward functions and callbacks. If you need quick simple functions such as follow, like, DM and others, then this package is for you. Contributor williamdsanders05@gmail.com This package is still under development. 
 
+<!-- TABLE OF CONTENTS -->
+## Table Of Contents
+[Who Am I](#who-am-i)
 
 <!-- GETTING STARTED -->
 ## Getting Started
