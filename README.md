@@ -8,9 +8,9 @@ A simplified version of Twitters V2 api with straight forward functions and call
 
 <!-- TABLE OF CONTENTS -->
 ## Table Of Contents
-[Who Am I](#who-am-i)
-[Get User Details](#get-user-details)
-[Get User Details](#get-user-details)
+1. [Who Am I](#who-am-i)
+2. [Get User Details](#get-user-details)
+3. [Get Users Replied To Tweet](#get-users-reploed-to-tweet)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -80,7 +80,7 @@ Returns an object with the users id, name, and username.
 ```
 
 
-### Get all users who replied to a tweet.
+### Get users replied to tweet.
 You can get up to 100 users who replied to a tweet. Pass the conversation id (same as post id) as an argument along with a number between 10-100. If you do not pass an amount it will default to 10.
 ```js
 //Async Function
