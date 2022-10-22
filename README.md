@@ -222,12 +222,60 @@ Returns an array with user objects and total result count.
 You can make a tweet by passing a message in as an argument.
 ```js
 //Async Function
-const makeTweet = await twitter.tweet('You are the best dev!')
+const makeTweet = await twitter.tweet('You are the number one dev in the world!')
 console.log(makeTweet)
 ```
-Returns a boolean liked object with the value of true. 
+Returns a large object with the status of the created tweet. 
 ```js
-{ liked: true }
+{
+  created_at: 'Sat Oct 22 19:22:30 +0000 2022',
+  id: 1583901622342344305700,
+  id_str: '1583901627605405696',
+  full_text: 'You are the number one dev in the world!',
+  truncated: false,
+  display_text_range: [ 0, 38 ],
+  entities: { hashtags: [], symbols: [], user_mentions: [], urls: [] },
+  // Alot more information 
+```
+
+### Reply to a tweet
+You can reply to a tweet by passing a message and the tweet id in as an argument.
+```js
+//Async Function
+const replyTweet = await twitter.reply("Let's work together!", '1580661436132757506')
+console.log(replyTweet)
+```
+Returns a large object with the tweet reply status. 
+```js
+{
+  created_at: 'Sat Oct 22 19:30:55 +0000 2022',
+  id: 15839037345344486412000,
+  id_str: '158395435436186412032',
+  full_text: "@twitter Let's work together!",
+  truncated: false,
+  display_text_range: [ 13, 33 ],
+  entities: { hashtags: [], symbols: [], user_mentions: [ [Object] ], urls: [] },
+  // Alot more information 
+```
+
+### Delete a tweet
+You can delete a tweet that belongs to you by passing the tweet id as an argument.
+```js
+//Async Function
+const deleteTweet = await twitter.delete('1580661436132757506')
+console.log(replyTweet)
+```
+Returns a large object with the deleted tweet's status. 
+```js
+{
+  created_at: 'Mon Oct 17 08:23:23 +0000 2022',
+  id: 158192381666432424323400,
+  id_str: '15819238123423939968',
+  full_text: "@twitter Let's work together!",
+  truncated: false,
+  display_text_range: [ 0, 24 ],
+  entities: { hashtags: [], symbols: [], user_mentions: [], urls: [] },
+  // Alot more information 
 ```
 
 ### Like a tweet

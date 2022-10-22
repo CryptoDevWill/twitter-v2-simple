@@ -61,7 +61,7 @@ class TwitterV2Simple {
   //Delete a tweet
   async delete(tweetId){
     if(!tweetId) return 'Enter tweet id to delete.';
-    return await this.client.v1.deleteTweet(tweetid)
+    return await this.client.v1.deleteTweet(tweetId)
         .then((response)=>{
             return response;
         })
