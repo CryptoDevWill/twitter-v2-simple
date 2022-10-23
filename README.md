@@ -39,7 +39,7 @@ There are a few steps that need to take place before you can use the full functi
 
 You will need to access your API keys, and Tokens to initiate the Twitter V2 client.
 
-1. Install NPM packages
+1. Install NPM package
    ```sh
    npm install twitter-v2-simple
    ```
@@ -354,7 +354,7 @@ Returns a large object with the deleted tweet's status.
 You can make a video or image tweet by passing the message and path to the file as an argument.
 ```js
 //Async Function
-const tweetImage = await twitter.tweetMedia('Check out me new image! 👀', '/home/images/your_image.png')
+const tweetImage = await twitter.tweetMedia('Check out my new image! 👀', '/home/images/your_image.png')
 console.log(tweetImage)
 ```
 Returns a large object with the media tweet details along with the media link. 
@@ -363,7 +363,7 @@ Returns a large object with the media tweet details along with the media link.
   created_at: 'Sun Oct 23 01:53:52 +0000 2022',
   id: 158345434121582166000,
   id_str: '1584543521582166019',
-  full_text: 'Check out me new image! 👀 https://t.co/Oj0sMb5gdf45r',
+  full_text: 'Check out my new image! 👀 https://t.co/Oj0sMb5gdf45r',
   truncated: false,
   display_text_range: [ 0, 4 ],
   entities: {
