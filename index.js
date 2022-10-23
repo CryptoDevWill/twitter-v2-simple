@@ -58,6 +58,25 @@ class TwitterV2Simple {
     });
   }
 
+  //Make media tweet
+  async tweetMedia(message, mediaPath){
+    if(!message) return 'Enter a message.';
+    if(!mediaPath) return 'Enter image or video path.';
+    return await this.client.v1.uploadMedia(mediaPath)
+        .then(async (mediaId)=>{
+            return await this.client.v1.tweet(message, { media_ids: mediaId })
+                .then((response)=>{
+                    return response;
+                })
+                .catch(()=>{
+                    return error;
+                });
+        })
+        .catch((error)=>{
+            return error.data;
+        });
+  }
+
   //Delete a tweet
   async delete(tweetId){
     if(!tweetId) return 'Enter tweet id to delete.';

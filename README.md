@@ -19,9 +19,10 @@ A simplified version of Twitters V2 api with straight forward functions and call
 7. [Direct Message a user](#direct-message-a-user)
 ### Tweets
 8. [Make a tweet](#make-a-tweet)
-9. [Get a tweet](#get-a-tweet)
-10. [Reply to a tweet](#reply-to-a-tweet)
-11. [Like a tweet](#like-a-tweet)
+9. [Make a media tweet image/video](#make-a-media-tweet-image/video)
+10. [Get a tweet](#get-a-tweet)
+11. [Reply to a tweet](#reply-to-a-tweet)
+12. [Like a tweet](#like-a-tweet)
 13. [Unlike a tweet](#unlike-a-tweet)
 14. [Delete a tweet](#delete-a-tweet)
 <!-- GETTING STARTED -->
@@ -254,6 +255,33 @@ Returns a large object with the status of the created tweet.
   truncated: false,
   display_text_range: [ 0, 38 ],
   entities: { hashtags: [], symbols: [], user_mentions: [], urls: [] },
+  // Alot more information 
+```
+
+### Make a media tweet image/video
+You can make a video or image tweet by passing the messsage and path to the file as an argument.
+```js
+//Async Function
+const tweetImage = await twitter.tweetMedia('Check out me new image! 👀', '/home/images/your_image.png')
+console.log(tweetImage)
+```
+Returns a large object with the media tweet details along with the media link. 
+```js
+{
+  created_at: 'Sun Oct 23 01:53:52 +0000 2022',
+  id: 158345434121582166000,
+  id_str: '1584543521582166019',
+  full_text: 'Check out me new image! 👀 https://t.co/Oj0sMb5gdf45r',
+  truncated: false,
+  display_text_range: [ 0, 4 ],
+  entities: {
+    hashtags: [],
+    symbols: [],
+    user_mentions: [],
+    urls: [],
+    media: [ [Object] ]
+  },
+  extended_entities: { media: [ [Object] ] },
   // Alot more information 
 ```
 
