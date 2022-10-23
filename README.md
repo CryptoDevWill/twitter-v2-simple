@@ -260,55 +260,6 @@ Returns a large object with the status of the created tweet.
   entities: { hashtags: [], symbols: [], user_mentions: [], urls: [] },
   // Alot more information 
 ```
-
-### Make a media tweet
-You can make a video or image tweet by passing the message and path to the file as an argument.
-```js
-//Async Function
-const tweetImage = await twitter.tweetMedia('Check out me new image! 👀', '/home/images/your_image.png')
-console.log(tweetImage)
-```
-Returns a large object with the media tweet details along with the media link. 
-```js
-{
-  created_at: 'Sun Oct 23 01:53:52 +0000 2022',
-  id: 158345434121582166000,
-  id_str: '1584543521582166019',
-  full_text: 'Check out me new image! 👀 https://t.co/Oj0sMb5gdf45r',
-  truncated: false,
-  display_text_range: [ 0, 4 ],
-  entities: {
-    hashtags: [],
-    symbols: [],
-    user_mentions: [],
-    urls: [],
-    media: [ [Object] ]
-  },
-  extended_entities: { media: [ [Object] ] },
-  // Alot more information 
-```
-
-### Make a Twitter poll
-You can make a Twitter poll by simply passing a poll object containing a question, options (array), and days.
-```js 
-const twitterPoll = await twitter.poll({
-    question: 'Do you like Twitter V2 Simple? 🤔',
-    options: ['Yes', 'Kinda', 'No'],
-    days: 7 //Between 1-7 days
-})
-
-console.log(twitterPoll)
-```
-Returns a small object with the poll text and id.
-```js
-{
-  data: {
-    id: '15840382454354354354203265',
-    text: 'Do you like Twitter V2 Simple? 🤔'
-  }
-}
-```
-
 ### Get a tweet.
 Get the details of a given tweet.
 ```js
@@ -398,4 +349,51 @@ Returns a large object with the deleted tweet's status.
   display_text_range: [ 0, 24 ],
   entities: { hashtags: [], symbols: [], user_mentions: [], urls: [] },
   // Alot more information 
+```
+### Make a media tweet
+You can make a video or image tweet by passing the message and path to the file as an argument.
+```js
+//Async Function
+const tweetImage = await twitter.tweetMedia('Check out me new image! 👀', '/home/images/your_image.png')
+console.log(tweetImage)
+```
+Returns a large object with the media tweet details along with the media link. 
+```js
+{
+  created_at: 'Sun Oct 23 01:53:52 +0000 2022',
+  id: 158345434121582166000,
+  id_str: '1584543521582166019',
+  full_text: 'Check out me new image! 👀 https://t.co/Oj0sMb5gdf45r',
+  truncated: false,
+  display_text_range: [ 0, 4 ],
+  entities: {
+    hashtags: [],
+    symbols: [],
+    user_mentions: [],
+    urls: [],
+    media: [ [Object] ]
+  },
+  extended_entities: { media: [ [Object] ] },
+  // Alot more information 
+```
+
+### Make a Twitter poll
+You can make a Twitter poll by simply passing a poll object containing a question, options (array), and days.
+```js 
+const twitterPoll = await twitter.poll({
+    question: 'Do you like Twitter V2 Simple? 🤔',
+    options: ['Yes', 'Kinda', 'No'],
+    days: 7 //Between 1-7 days
+})
+
+console.log(twitterPoll)
+```
+Returns a small object with the poll text and id.
+```js
+{
+  data: {
+    id: '15840382454354354354203265',
+    text: 'Do you like Twitter V2 Simple? 🤔'
+  }
+}
 ```
