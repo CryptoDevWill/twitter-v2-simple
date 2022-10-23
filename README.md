@@ -7,25 +7,27 @@
 A simplified version of Twitter’s V2 API 😮‍💨 with straight forward functions and callbacks. If you need quick simple functions such as follow, like, DM and others, then this package is for you. This package only contains two dependencies: [Twitter SDK](null) and [Twitter API V2](https://www.npmjs.com/package/twitter-api-v2)🙏. Contributor williamdsanders05@gmail.com This package is still under development. 🛠️
 
 <!-- TABLE OF CONTENTS -->
-## Table Of Contents
-### User
-1. [Who am I](#who-am-i) 🤷‍♂️
+## Table Of Contents 📜
+### User 👤
+1. [Who am I](#who-am-i) 
 2. [Get users details](#get-a-users-details)
 3. [Get users replied to tweet](#get-users-replied-to-tweet)
 4. [Follow a user](#follow-a-user) 🤝
 5. [Unfollow a user](#unfollow-a-user)
 5. [Get followers of a user](#get-followers-of-a-user)
 6. [Get following of a user](#get-following-of-user)
-7. [Direct Message a user](#direct-message-a-user) 📥
-### Tweets
+### Direct Message 📥
+7. [Direct Message a user](#direct-message-a-user)
+### Tweet 🐦
 8. [Make a tweet](#make-a-tweet)
-9. [Make a media tweet](#make-a-media-tweet)
-10. [Make a Twitter poll](#make-a-twitter-poll)
-11. [Get a tweet](#get-a-tweet)
-12. [Reply to a tweet](#reply-to-a-tweet)
-13. [Like a tweet](#like-a-tweet)
-14. [Unlike a tweet](#unlike-a-tweet)
-15. [Delete a tweet](#delete-a-tweet)
+9. [Get a tweet](#get-a-tweet)
+10. [Reply to a tweet](#reply-to-a-tweet)
+11. [Like a tweet](#like-a-tweet)
+12. [Unlike a tweet](#unlike-a-tweet)
+13. [Delete a tweet](#delete-a-tweet)
+### Media 📸
+14. [Make a media tweet](#make-a-media-tweet)
+15. [Make a Twitter poll](#make-a-twitter-poll)
 <!-- GETTING STARTED -->
 ## Getting Started
 There are a few steps that need to take place before you can use the full functionality of Twitters V2 Api.
