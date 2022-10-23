@@ -12,11 +12,11 @@ A simplified version of Twitter’s V2 API 😮‍💨 with straight forward fun
 1. [Who am I](#who-am-i) 🤷‍♂️
 2. [Get users details](#get-a-users-details)
 3. [Get users replied to tweet](#get-users-replied-to-tweet)
-4. [Follow a user](#follow-a-user)
+4. [Follow a user](#follow-a-user) 🤝
 5. [Unfollow a user](#unfollow-a-user)
 5. [Get followers of a user](#get-followers-of-a-user)
 6. [Get following of a user](#get-following-of-user)
-7. [Direct Message a user](#direct-message-a-user)
+7. [Direct Message a user](#direct-message-a-user) 📥
 ### Tweets
 8. [Make a tweet](#make-a-tweet)
 9. [Make a media tweet](#make-a-media-tweet)
@@ -62,7 +62,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-V2 simple only focuses on the main core functions in the user and tweet category. For more advanced functions please visit the original Twitter SDK for further documentation. [Twitter SDK](https://github.com/twitterdev/twitter-api-typescript-sdk)
+Twitter V2 Simple only focuses on the main core functions in the user and tweet category. For more advanced functions please visit the original Twitter SDK for further documentation. [Twitter SDK](https://github.com/twitterdev/twitter-api-typescript-sdk)
 ## User
 ### Who Am I
 Get the current logged in user for Twitter. 
