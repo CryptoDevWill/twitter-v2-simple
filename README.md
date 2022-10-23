@@ -385,7 +385,6 @@ const twitterPoll = await twitter.poll({
     options: ['Yes', 'Kinda', 'No'],
     days: 7 //Between 1-7 days
 })
-
 console.log(twitterPoll)
 ```
 Returns a small object with the poll text and id.
