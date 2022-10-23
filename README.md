@@ -259,7 +259,7 @@ Returns a large object with the status of the created tweet.
 ```
 
 ### Make a media tweet image/video
-You can make a video or image tweet by passing the messsage and path to the file as an argument.
+You can make a video or image tweet by passing the message and path to the file as an argument.
 ```js
 //Async Function
 const tweetImage = await twitter.tweetMedia('Check out me new image! 👀', '/home/images/your_image.png')
