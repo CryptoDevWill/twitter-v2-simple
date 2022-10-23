@@ -65,7 +65,7 @@ You will need to access your API keys, and Tokens to initiate the Twitter V2 cli
 <!-- USAGE EXAMPLES -->
 ## Usage
 Twitter V2 Simple only focuses on the main core functions in the user and tweet category. For more advanced functions please visit the original Twitter SDK for further documentation. [Twitter SDK](https://github.com/twitterdev/twitter-api-typescript-sdk)
-## User
+## User 👤
 ### Who Am I
 Get the current logged in user for Twitter. 
 ```js
@@ -240,7 +240,7 @@ Returns an object with the Direct Message details.
          }
    }
 ```
-## Tweets
+## Tweet 🐦
 ### Make a tweet
 You can make a tweet by passing a message in as an argument.
 ```js
