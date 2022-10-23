@@ -83,7 +83,7 @@ class TwitterV2Simple {
     if(poll_object.days > 7 || poll_object.days < 1) return "Must be between 1 and 7 days."
     return await this.client.v2.tweet(poll_object.question, {
         poll: { 
-            duration_minutes: 10080 / poll_object.days, 
+            duration_minutes: poll_object.days * 1440, 
             options: poll_object.options 
         }
       })
