@@ -10,16 +10,16 @@ A simplified version of Twitters V2 api with straight forward functions and call
 ## Table Of Contents
 ### User
 1. [Who am I](#who-am-i)
-2. [Get user details](#get-user-details)
+2. [Get users details](#get-a-users-details)
 3. [Get users replied to tweet](#get-users-replied-to-tweet)
 4. [Follow a user](#follow-a-user)
 5. [Unfollow a user](#unfollow-a-user)
 5. [Get followers of a user](#get-followers-of-a-user)
-6. [Get following of a user](#get-following-of-a-user)
+6. [Get following of a user](#get-following-of-user)
 7. [Direct Message a user](#direct-message-a-user)
 ### Tweets
 8. [Make a tweet](#make-a-tweet)
-9. [Make a media tweet image/video](#make-a-media-tweet-image/video)
+9. [Make a media](#make-a-media-tweet)
 10. [Get a tweet](#get-a-tweet)
 11. [Reply to a tweet](#reply-to-a-tweet)
 12. [Like a tweet](#like-a-tweet)
@@ -80,7 +80,7 @@ Returns an object with your id, name, and username.
 }
 ```
 
-### Get a user details
+### Get a users details
 Get the details of a single user. Pass the Twitter username as an argument.
 ```js
 //Async Function
@@ -258,7 +258,7 @@ Returns a large object with the status of the created tweet.
   // Alot more information 
 ```
 
-### Make a media tweet image/video
+### Make a media tweet
 You can make a video or image tweet by passing the message and path to the file as an argument.
 ```js
 //Async Function
