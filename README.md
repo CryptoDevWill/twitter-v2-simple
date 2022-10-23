@@ -26,7 +26,7 @@ A simplified version of Twitter’s V2 API 😮‍💨 with straight forward fun
 12. [Unlike a tweet](#unlike-a-tweet)
 13. [Delete a tweet](#delete-a-tweet)
 ### Media 📸
-14. [Make a media tweet](#make-a-media-tweet)
+14. [Make a media tweet image/video](#make-a-media-tweet)
 15. [Make a Twitter poll](#make-a-twitter-poll)
 <!-- GETTING STARTED -->
 ## Getting Started
