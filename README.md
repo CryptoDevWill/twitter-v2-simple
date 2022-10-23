@@ -4,12 +4,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-A simplified version of Twitters V2 api with straight forward functions and callbacks. If you need quick simple functions such as follow, like, DM and others, then this package is for you. Contributor williamdsanders05@gmail.com This package is still under development. 
+A simplified version of Twitter’s V2 API 😮‍💨 with straight forward functions and callbacks. If you need quick simple functions such as follow, like, DM and others, then this package is for you. This package only contains two dependencies: [Twitter SDK](null) and [Twitter API V2](https://www.npmjs.com/package/twitter-api-v2)🙏. Contributor williamdsanders05@gmail.com This package is still under development. 🛠️
 
 <!-- TABLE OF CONTENTS -->
 ## Table Of Contents
 ### User
-1. [Who am I](#who-am-i)
+1. [Who am I](#who-am-i) 🤷‍♂️
 2. [Get users details](#get-a-users-details)
 3. [Get users replied to tweet](#get-users-replied-to-tweet)
 4. [Follow a user](#follow-a-user)
@@ -19,8 +19,8 @@ A simplified version of Twitters V2 api with straight forward functions and call
 7. [Direct Message a user](#direct-message-a-user)
 ### Tweets
 8. [Make a tweet](#make-a-tweet)
-9. [Make a media tweet](#make-a-twitter-poll)
-10. [Make a Twitter poll](#make-a-media-tweet)
+9. [Make a media tweet](#make-a-media-tweet)
+10. [Make a Twitter poll](#make-a-twitter-poll)
 11. [Get a tweet](#get-a-tweet)
 12. [Reply to a tweet](#reply-to-a-tweet)
 13. [Like a tweet](#like-a-tweet)
@@ -297,7 +297,7 @@ const twitterPoll = await twitter.poll({
 
 console.log(twitterPoll)
 ```
-Returns a small object with the poll question and id.
+Returns a small object with the poll text and id.
 ```js
 {
   data: {
