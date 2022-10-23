@@ -19,7 +19,7 @@ A simplified version of Twitters V2 api with straight forward functions and call
 7. [Direct Message a user](#direct-message-a-user)
 ### Tweets
 8. [Make a tweet](#make-a-tweet)
-9. [Make a media](#make-a-media-tweet)
+9. [Make a media tweet](#make-a-media-tweet)
 10. [Get a tweet](#get-a-tweet)
 11. [Reply to a tweet](#reply-to-a-tweet)
 12. [Like a tweet](#like-a-tweet)
