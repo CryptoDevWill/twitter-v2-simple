@@ -3,8 +3,8 @@
 <a name="readme-top"></a>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-A simplified version of Twitter’s V2 API 😮‍💨 with straight forward functions and callbacks. If you need quick simple functions such as follow, like, DM and others, then this package is for you. This package only contains two dependencies: [Twitter SDK](null) and [Twitter API V2](https://www.npmjs.com/package/twitter-api-v2)🙏. Contributor williamdsanders05@gmail.com This package is still under development. 🛠️
+## About The Project ℹ️
+A simplified version of Twitter’s V1 & V2 API 😮‍💨 with straight forward functions and callbacks. If you need quick simple functions such as follow, like, DM and others, then this package is for you. This package only contains two dependencies: [Twitter SDK](https://www.npmjs.com/package/twitter-api-sdk) and [Twitter API V2](https://www.npmjs.com/package/twitter-api-v2)🙏. "Twitter V2 Simple" is also a combination of V1 and V2 to bring a seamless integrated workflow. 🦾 Contributor williamdsanders05@gmail.com This package is still under development. 🛠️
 
 <!-- TABLE OF CONTENTS -->
 ## Table Of Contents 📜
