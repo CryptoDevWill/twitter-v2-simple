@@ -19,12 +19,13 @@ A simplified version of Twitters V2 api with straight forward functions and call
 7. [Direct Message a user](#direct-message-a-user)
 ### Tweets
 8. [Make a tweet](#make-a-tweet)
-9. [Make a media tweet](#make-a-media-tweet)
-10. [Get a tweet](#get-a-tweet)
-11. [Reply to a tweet](#reply-to-a-tweet)
-12. [Like a tweet](#like-a-tweet)
-13. [Unlike a tweet](#unlike-a-tweet)
-14. [Delete a tweet](#delete-a-tweet)
+9. [Make a media tweet](#make-a-twitter-poll)
+10. [Make a Twitter poll](#make-a-media-tweet)
+11. [Get a tweet](#get-a-tweet)
+12. [Reply to a tweet](#reply-to-a-tweet)
+13. [Like a tweet](#like-a-tweet)
+14. [Unlike a tweet](#unlike-a-tweet)
+15. [Delete a tweet](#delete-a-tweet)
 <!-- GETTING STARTED -->
 ## Getting Started
 There are a few steps that need to take place before you can use the full functionality of Twitters V2 Api.
@@ -283,6 +284,27 @@ Returns a large object with the media tweet details along with the media link.
   },
   extended_entities: { media: [ [Object] ] },
   // Alot more information 
+```
+
+### Make a Twitter poll
+You can make a Twitter poll by simply passing a poll object containing a question, options (array), and days.
+```js 
+const twitterPoll = await twitter.poll({
+    question: 'Do you like Twitter V2 Simple? 🤔',
+    options: ['Yes', 'Kinda', 'No'],
+    days: 7 //Between 1-7 days
+})
+
+console.log(twitterPoll)
+```
+Returns a small object with the poll question and id.
+```js
+{
+  data: {
+    id: '15840382454354354354203265',
+    text: 'Do you like Twitter V2 Simple? 🤔'
+  }
+}
 ```
 
 ### Get a tweet.

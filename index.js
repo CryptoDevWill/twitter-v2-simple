@@ -77,6 +77,25 @@ class TwitterV2Simple {
         });
   }
 
+  //Make a poll tweet
+  async poll(poll_object){
+    if(!poll_object) return "Enter poll object"
+    if(poll_object.days < 7 || poll_object.days <= 0) return "Must be between 1 and 7 days."
+    return await this.client.v2.tweet(poll_object.question, {
+        poll: { 
+            duration_minutes: 10080 / poll_object.days, 
+            options: poll_object.options 
+        }
+      })
+        .then((response)=>{
+            return response;
+        })
+        .catch((error)=>{
+            console.log(error)
+            return error.message;
+        });
+  }
+
   //Delete a tweet
   async delete(tweetId){
     if(!tweetId) return 'Enter tweet id to delete.';
