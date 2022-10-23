@@ -319,16 +319,20 @@ console.log(tweet)
 Returns tweet object.
 ```js
 {
-   users: [ { id: '783214', name: 'Twitter', username: 'Twitter' } ],
-   tweets: [
-         {
-            text: 'a hit Tweet. 🤝🏽',
-            edit_history_tweet_ids: [Array],
-            id: '1580661436132757506',
-            author_id: '783214'
-         }
-      ]
-}
+  created_at: 'Thu Oct 13 20:47:08 +0000 2022',
+  id: 158066143634534534534757500,
+  id_str: '1580661543543534436132757506',
+  full_text: 'a hit Tweet 🤝🏽 https://t.co/VGrsylXB8D https://t.co/2C7cah4KzW',
+  truncated: false,
+  display_text_range: [ 0, 35 ],
+  entities: {
+    hashtags: [],
+    symbols: [],
+    user_mentions: [],
+    urls: [ [Object] ],
+    media: [ [Object] ]
+  },
+  extended_entities: { media: [ [Object] ] }
 ```
 
 ### Reply to a tweet

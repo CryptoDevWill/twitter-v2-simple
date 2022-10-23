@@ -124,25 +124,12 @@ class TwitterV2Simple {
   //Get a tweet details.
   async getTweet(tweetId){
       if(!tweetId) return "Enter Tweet id.";
-      const response = await this.client2.tweets.findTweetsById({
-          "ids": [
-              tweetId
-          ],
-          "expansions": [
-              "attachments.poll_ids",
-              "author_id",
-              "edit_history_tweet_ids",
-              "entities.mentions.username",
-              "in_reply_to_user_id",
-              "referenced_tweets.id",
-              "referenced_tweets.id.author_id"
-          ]
-        })
+      return await this.client.v1.singleTweet(tweetId)
         .then((response)=>{
-            return response.includes;
+            return response;
         })
         .catch((error)=>{
-            return error.error.errors[0].message;
+            return error.message;
         });
   }
 
