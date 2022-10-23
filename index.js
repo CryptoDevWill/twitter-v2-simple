@@ -80,7 +80,7 @@ class TwitterV2Simple {
   //Make a poll tweet
   async poll(poll_object){
     if(!poll_object) return "Enter poll object"
-    if(poll_object.days < 7 || poll_object.days <= 0) return "Must be between 1 and 7 days."
+    if(poll_object.days > 7 || poll_object.days < 1) return "Must be between 1 and 7 days."
     return await this.client.v2.tweet(poll_object.question, {
         poll: { 
             duration_minutes: 10080 / poll_object.days, 
